@@ -38,10 +38,10 @@ class ZaznamOTankovani {
 }
 
 class _SpotrebaHomePageState extends State<SpotrebaHomePage> {
-  List<ZaznamOTankovani> _seznam = [];
+  final List<ZaznamOTankovani> _seznam = [];
 
-  final TextEditingController _mnozstviPalivaController = new TextEditingController();
-  final TextEditingController _stavTachometruController = new TextEditingController();
+  final TextEditingController _mnozstviPalivaController = TextEditingController();
+  final TextEditingController _stavTachometruController = TextEditingController();
 
   void _pridejZaznam() {
     setState(() {
@@ -93,7 +93,8 @@ class _SpotrebaHomePageState extends State<SpotrebaHomePage> {
                   );
                 },
               ),
-            ),          ],
+            ),
+          ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
